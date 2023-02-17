@@ -1,14 +1,14 @@
 [default]
 ; Node url
-node_url = https://wallet.burst.cryptoguru.org
+node_url = https://europe.signum.network
 ; Node port
-node_port = 8125
+node_port = 443
 ; Logging level
 logging_level = WARNING
 ; Max retries
 max_retries = 3
 
 [test]
-node_url = http://176.9.47.157
+node_url = https://europe3.testnet.signum.network
 ; Node port
-node_port = 6876
+node_port = 443
