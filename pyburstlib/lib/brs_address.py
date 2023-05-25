@@ -23,7 +23,7 @@ class BRSAddress:
         '''
         Returns the 'BURST-xxxx-xxxx-xxxx-xxxxx' address for the BRSAddress object.
         '''
-        out = 'BURST-'
+        out = 'S-'
         for i in range(17):
             out += self.alphabet[self.codeword[self.cwmap[i]]]
             if i & 3 == 3 and i < 13:
