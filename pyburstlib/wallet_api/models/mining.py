@@ -19,14 +19,23 @@ class Accounts(BaseModel):
 class MiningInfo(BaseModel):
     def __init__(
             self,
+            height=None,
             generationSignature=None,
             baseTarget=None,
+            averageCommitmentNQT=None,
+            lastBlockReward=None,
+            lastBlockRewardNQT=None,
+            timestamp=None,
             requestProcessingTime=None,
-            height=None):
+        ):
+        self.height = height
         self.generationSignature = generationSignature
         self.baseTarget = baseTarget
+        self.averageCommitmentNQT = averageCommitmentNQT
+        self.lastBlockReward = lastBlockReward
+        self.lastBlockRewardNQT = lastBlockRewardNQT
+        self.timestamp = timestamp
         self.requestProcessingTime = requestProcessingTime
-        self.height = height
 
 class RewardRecipient(BaseModel):
     def __init__(
