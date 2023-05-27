@@ -1,28 +1,21 @@
 
-# pyburstlib
+# pyburstlib/pysignumlib
 
-[![MIT](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE) [![Build Status](https://travis-ci.org/beatsbears/pyburstlib.svg?branch=master)](https://travis-ci.org/beatsbears/pyburstlib) [![PyPI version](https://badge.fury.io/py/pyburstlib.svg)](https://badge.fury.io/py/pyburstlib)
+[![MIT](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE)
 
 ## Description
+pysignumlib is updated to be used with signum instead of burst. This branch is meant to be a git submodule into another git project. The main branch should be able to be installed with pip and work as a python module. 
+
 pyburstlib is a python library built to allow for interactions with the Burst Wallet API programmatically via a python wrapper as well as a library providing access to Burst functions in native python.  
 
-## Getting Started
+## Getting Started this branch
 
-1. import the library
-    $ pip install pyburstlib
-2. Add a pyburstlib.ini file
-
-## Development
-
-    $ virtualenv .venv -p $(which python3)
-    $ source ./.venv/bin/activate
-    $ export PYTHONPATH=.
-    $ pip install -r ./requirements.txt
+1. git submodule add pysignumlib <giturl>
+2. git submodule init
+3. Add a pyburstlib.ini file
+4. from pysignumlib.client import *
+5. Explore the available api's and build from there
 
 
-## Credits
+## Original Credits
 - @beatsbears (aka drownedcoast) - Andrew Scott - Primary developer
-
-### Donate
-- Andrew Scott (drownedcoast) - BURST-Q944–2MY3–97ZZ-FBWGB
-<img align="right" width="298" height="120" title="Powered By Burst" src="https://raw.githubusercontent.com/PoC-Consortium/Marketing_Resources/master/Powered_By_Burst/PBB4.png"/>
