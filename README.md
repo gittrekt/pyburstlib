@@ -10,7 +10,7 @@ pyburstlib is a python library built to allow for interactions with the Burst Wa
 
 ## Getting Started this branch
 
-1. git submodule add pysignumlib <giturl>
+1. git submodule add pysignumlib < giturl >
 2. git submodule init
 3. Add a pyburstlib.ini file
 4. from pysignumlib.client import *
