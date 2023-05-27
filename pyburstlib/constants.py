@@ -6,4 +6,4 @@ pyburstlib
 **EDIT
 :Updated API end-point from /burst to /api-doc
 '''
-BASE_WALLET_PATH = '/api-doc'
+BASE_WALLET_PATH = '/api'
