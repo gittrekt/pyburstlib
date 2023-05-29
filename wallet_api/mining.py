@@ -59,7 +59,7 @@ class MiningApi(BaseApi):
         response = self._client.post(uri=BASE_WALLET_PATH, params=req)
         return SetRewardRecipientResponse.from_json(response.text)
 
-    def submit_nonce(self, secret_pass=None, nonce=None, account_id=None):
+    def submit_nonce(self, secret_pass=None, blockheight=None, nonce=None, account_id=None):
         '''
         Submits a nonce as part of the mining process.
 
@@ -74,6 +74,7 @@ class MiningApi(BaseApi):
         response = self._client.post(uri=BASE_WALLET_PATH, 
                                    params={'requestType': 'submitNonce',
                                            'secretPhrase': secret_pass,
+                                           'blockheight': blockheight,
                                            'nonce': nonce,
                                            'accountId': account_id})
         return SubmitNonceResponse.from_json(response.text)
