@@ -4,6 +4,8 @@ pyburstlib
 :date: 3-24-2018
 '''
 
+
+### TODO: For the love of god, please refactor this ###
 class BRSAddress:
     '''
     Creates a Burst address from an account Id
