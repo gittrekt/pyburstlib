@@ -7,6 +7,7 @@ from hashlib import sha256
 import nacl.public as curve25519 #pynacl
 
 import pyburstlib.lib.utils.converters as conv
+import pyburstlib.lib.rs_address as rs
 
 def get_public_key(secret_pass):
     # 1. hex string to bytes
@@ -21,7 +22,7 @@ def get_public_key(secret_pass):
     pub = curve25519.PrivateKey(bh).public_key._public_key # as bytes
     return conv.bytearray_to_hex_string(pub)
 
-def get_account_id(secret_pass):
+def get_account_id(secret_pass: str) -> int:
     # 1. secret pass to hex stirng
     # 2. public key from hex string
     # 3. hex string to bytes
@@ -40,8 +41,10 @@ def get_account_id(secret_pass):
     byte_array = conv.hex_string_to_byte_array(hex_str)
     return conv.int_from_bytearray(byte_array[:8])
 
-def get_account_address(secret_pass):
-    return ''
+def get_account_address(secret_pass: str = None, account_id: int = None) -> str:
+    if secret_pass: accountId = get_account_id(secret_pass)
+    else: accountId = account_id
+    return rs.get_address(account_id=accountId)
 
 def simple_hash(message):
     h = sha256()
